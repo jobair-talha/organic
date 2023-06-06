@@ -1,0 +1,46 @@
+@import "../utils/variable";
+
+.banner {
+  .slick-dots {
+    bottom: 24px;
+
+    li {
+      width: 20px;
+      height: 20px;
+      background: $white-color;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+
+      button {
+        opacity: 0;
+      }
+    }
+    .slick-active {
+      background: $primary-color;
+    }
+  }
+  .slick-next {
+    right: 25px;
+    color: $primary-color;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      color: $white-color;
+    }
+  }
+  .slick-prev {
+    left: 25px;
+    color: $primary-color;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      color: $white-color;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../utils/variable";
+
+.categories {
+  .slick-next {
+    color: $primary-color;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .slick-prev {
+    color: $primary-color;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
