@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { AiOutlineBars } from "react-icons/ai";
+import { AiOutlineBars, AiOutlineShoppingCart } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import Logo from "../../../assets/images/Logo.png";
+import Cart from "../../cart/Cart";
 import Button from "../Button";
 import NavLinks from "./NavLinks";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [openCart, setOpenCart] = useState(false);
+
   return (
     <nav className="bg-white">
       <div className="flex items-center font-medium justify-around">
@@ -26,9 +29,21 @@ const Navbar = () => {
           </li>
           <NavLinks />
         </ul>
+        <h1>
+          <Link to="/login">Login</Link>/<Link to="/register">Register</Link>
+        </h1>
         <div className="md:block hidden">
-          <Button />
+          <div
+            className="relative cursor-pointer mr-[15px]"
+            onClick={() => setOpenCart(true)}
+          >
+            <AiOutlineShoppingCart size={30} color="black" />
+            <span className="absolute right-0 top-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
+              1
+            </span>
+          </div>
         </div>
+        {openCart && <Cart setOpenCart={setOpenCart} />}
         {/* Mobile nav */}
         <ul
           className={`

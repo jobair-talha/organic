@@ -4,7 +4,12 @@ import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from "./app/store";
 import "./index.css";
-import { HomePage, ProductDetailsPage } from "./routes/Routes";
+import {
+  HomePage,
+  LoginPage,
+  ProductDetailsPage,
+  RegisterPage,
+} from "./routes/Routes";
 import "./sass/_global.scss";
 
 const router = createBrowserRouter([
@@ -15,6 +20,14 @@ const router = createBrowserRouter([
   {
     path: "/products/:id",
     element: <ProductDetailsPage />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
   },
 ]);
 
