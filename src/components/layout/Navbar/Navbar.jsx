@@ -6,12 +6,14 @@ import Logo from "../../../assets/images/Logo.png";
 import Button from "../Button";
 import NavLinks from "./NavLinks";
 const Navbar = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <nav className="bg-white">
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          <img src={Logo} alt="logo" className="md:cursor-pointer h-9" />
+          <Link to="/">
+            <img src={Logo} alt="logo" className="md:cursor-pointer h-9" />
+          </Link>
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             {open ? <GrClose /> : <AiOutlineBars />}
           </div>

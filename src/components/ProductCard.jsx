@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductImage from "../assets/images/Mct-Oil-500ml.jpg";
 
 function ProductCard() {
@@ -5,7 +6,9 @@ function ProductCard() {
     <>
       <div className="text-center">
         <div className="relative">
-          <img src={ProductImage} alt="product" />
+          <Link to={`/products/1`}>
+            <img src={ProductImage} alt="product" />
+          </Link>
         </div>
         <div className="mt-3">
           <h3>AgriLife MCT Oil – 500ml Lorem ipsum dolor sit.</h3>
