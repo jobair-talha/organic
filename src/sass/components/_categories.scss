@@ -20,4 +20,12 @@
       color: $primary-color;
     }
   }
+  @media only screen and (max-width: 1024px) {
+    .slick-next {
+      right: 0;
+    }
+    .slick-prev {
+      left: 0;
+    }
+  }
 }

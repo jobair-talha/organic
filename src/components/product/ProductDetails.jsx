@@ -79,9 +79,7 @@ const ProductDetails = () => {
         <br />
         <br />
         <div>
-          <h3 className=" uppercase text-primary mb-3 font-bold">
-            Description
-          </h3>
+          <h3 className="uppercase text-primary mb-3 font-bold">Description</h3>
           <div className="py-4">
             <div className="container h-[250px] overflow-y-hidden hover:overflow-y-scroll">
               <div dangerouslySetInnerHTML={{ __html: InnerText }}></div>

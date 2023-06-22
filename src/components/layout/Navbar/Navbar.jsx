@@ -29,9 +29,7 @@ const Navbar = () => {
           </li>
           <NavLinks />
         </ul>
-        <h1>
-          <Link to="/login">Login</Link>/<Link to="/register">Register</Link>
-        </h1>
+
         <div className="md:block hidden">
           <div
             className="relative cursor-pointer mr-[15px]"
